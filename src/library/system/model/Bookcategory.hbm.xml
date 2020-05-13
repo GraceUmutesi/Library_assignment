@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2020 6:21:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="library.system.model.Bookcategory" table="BOOKCATEGORY" schema="TETA" optimistic-lock="version">
+        <id name="categoryid" type="string">
+            <column name="CATEGORYID" length="4" />
+            <generator class="assigned" />
+        </id>
+        <property name="categoryname" type="string">
+            <column name="CATEGORYNAME" length="30" />
+        </property>
+        <set name="books" table="BOOK" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CATEGORYID" length="4" />
+            </key>
+            <one-to-many class="library.system.model.Book" />
+        </set>
+    </class>
+</hibernate-mapping>

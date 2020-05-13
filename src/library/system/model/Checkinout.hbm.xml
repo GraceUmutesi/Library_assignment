@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2020 6:21:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="library.system.model.Checkinout" table="CHECKINOUT" schema="TETA" optimistic-lock="version">
+        <id name="opnumber" type="string">
+            <column name="OPNUMBER" length="15" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="book" class="library.system.model.Book" fetch="select">
+            <column name="BOOKID" length="4" />
+        </many-to-one>
+        <many-to-one name="client" class="library.system.model.Client" fetch="select">
+            <column name="REGNO" length="4" />
+        </many-to-one>
+        <property name="datetime" type="date">
+            <column name="DATETIME" length="7" />
+        </property>
+        <property name="operationcategory" type="string">
+            <column name="OPERATIONCATEGORY" length="30" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>
