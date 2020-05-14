@@ -1,9 +1,14 @@
 # Library_assignment
 This project is a simple library system for management where clients can be viewed with the books the are assigned to.
 
-## Getting Started
+## How to get the project
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+In order to have the project up and running on your local machine for development and testing purposes use the command 
+
+```
+git clone https://github.com/GraceUmutesi/Library_assignment 
+```
+but before make sure you have all the elements listed in the prerequisites below.
 
 ### Prerequisites
 
@@ -25,7 +30,4 @@ Java with swing for the front end.
 ## Authors
 
 * **Grace Umutesi** 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
